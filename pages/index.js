@@ -5,7 +5,7 @@ import Countdown from "react-countdown";
 import { VotingContext } from "../context/voter";
 import Style from "../styles/index.module.css";
 import Card from "../components/Card/Card";
-import image from "./panda.jpg";   
+import image from "../src/panda.jpg";   
 const index = ()=>{
     const{votingTitle}= useContext(VotingContext)
     return <div>{votingTitle}</div>;

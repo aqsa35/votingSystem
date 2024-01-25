@@ -1,4 +1,4 @@
-
+ 
 .createVoter{
     width: 95%;
     margin:  0 auto;
@@ -35,6 +35,7 @@
     color: #b3b8cd;
     height: 9rem;
     padding: 1rem;
+
 }
 
 .voterInfo_paragraph p{
@@ -67,7 +68,7 @@ border-radius: .2rem;
 }
 .card{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -85,11 +86,11 @@ border-radius: .2rem;
 
 /*______________ USER LIST _____________ */
 
-.createdVoter__info{
+ .createdVoter__info{
     background-color: #231E39;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0,0.35);
-    color: #b3b8cd;
+     color: #b3b8cd;
     padding: 2rem;
 }
 
@@ -101,21 +102,21 @@ color: #b3b8cd;
 padding: 2rem;
 }
 .voter__container__box{
-text-align: center;
-border: 1px dotted #9a02ac;
-border-radius: 5px;
-}
+    text-align: center;
+    border: 1px dotted #9a02ac;
+    border-radius: 5px;
+    }
+    .voter__container__box p{
+        line-height: .5s;
+    }
 
-.voter__container__box p{
-    line-height: .5s;
-}
 
 /*______________INPUT_____________ */
 .input__container{
-padding-top: 2rem;
-width: 80%;
-margin: 0 auto;
-}
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    }
 
 .Button{
     text-align: end;
@@ -124,7 +125,7 @@ margin: 0 auto;
 /* _________ MEDIA QUERY__________ */
 
 
-@media screen and (max-width:45em) {
+ @media screen and (max-width: 45em) {
     .createVoter{
         width: 90%;
         grid-template-columns: 1fr;
@@ -147,4 +148,4 @@ margin: 0 auto;
         font-size: 12px;
         height: 7.5rem;
     }
-}
+} 

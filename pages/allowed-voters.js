@@ -6,7 +6,7 @@ import Image from "next/image";
 // INTERNAL IMPORT
 import { VotingContext } from '../context/voter';
 import Style from '../styles/allowedVoters.module.css';
-import images from "./panda.jpg";   
+import images from "../src/panda.jpg";   
 import Button from '../components/Button/Button';
 import Input from '../components/Input/Input';
 import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
@@ -34,7 +34,7 @@ accept:"image/*",
 maxSize : 5000000,
 });
 
-//console.log(fileUrl)
+console.log(fileUrl);
 
 //-----------------JSX PART-----------------
 
@@ -93,13 +93,14 @@ maxSize : 5000000,
             <h1>Create New Voter</h1>
             <div className={Style.voter__container__box}> 
           <div className={Style.voter__container__box__div}>
-            <div{...getRootProps()}>
-            <input{...getInputProps()}/>
+            <div {...getRootProps()}>
+            <input {...getInputProps()}/>
+
             <div className={Style.voter__container__box__div__info}>
                  <p>Upload File: JPG, PNG, GIF, WEBM MAX 10MB</p>
-                 <div className={Style.voter__container__box__div__image}></div>
+                 <div className={Style.voter__container__box__div__image}>
                  <Image 
-               src={images.upload}
+               src={"/src/panda.jpg"}
                 width={150} 
                 height={150} 
                 objectFit="contain" 
@@ -107,13 +108,13 @@ maxSize : 5000000,
              </div>
              <p>Drag & Drop File</p>
              <p>or Browse Media on your device</p>
+             </div>
             </div>
            </div>
           </div>
         </div>
-        </div>
-         
-      <div className={Style.input__container}>
+    
+<div className={Style.input__container}>
         <Input
          inputType ="text" 
          title ="Name" 
@@ -123,7 +124,7 @@ maxSize : 5000000,
         }
         />
         
-         {/* <Input
+         <Input
          inputType ="text" 
          title ="Address" 
          placeholder = "Voter Address" 
@@ -136,33 +137,34 @@ maxSize : 5000000,
          placeholder = "Voter Position" 
          handleClick ={(e)=> 
         setFormInput({...formInput,position:e.target.value})
-        }/> */}
-        {/* <div className={Style .Button}>
+        }/> 
+         <div className={Style .Button}>
             <Button btnName = "Authorized Voter" handleClick={() => {}}/>
-        </div> */}
+        </div> 
+        </div>
       </div>
-       {/* i just add these */}
-               </div>
-               );
-             };
-           
-     
-         {/*//////////////////////// */}
 
-//          <div className={Style.createdVoter}>
-//             <div className={ Style.createdVoter__info}>
-//                  {/* <Image src={images.creator} alt="User Profile" />  */}
-//                 <p>Notice For User</p>
-//                 <p>Organizer <span>0x9399777..</span></p>
-//                 <p>
-//                     Only Organizer of the Voting Contract can Create Voter & Candidate for Voting Election
-//                 </p>
-//             </div>
-//        </div>  
-//     </div>
-//     );
-// };
+{/*//////////////////////// */}
+
+<div className={Style.createdVoter}>
+<div className={ Style.createdVoter__info}>
+      <Image 
+      src={"/src/panda.jpg"} 
+      width={150} 
+      height={150} 
+      alt="User Profile" />  
+    <p>Notice For User</p>
+    <p>Organizer <span>0x9399777..</span></p>
+    <p>
+        Only Organizer of the Voting Contract can Create Voter & Candidate for Voting Election
+    </p>
+</div>
+</div>  
+</div>    
+ );
+};
 
 
+    
 
 export default allowedVoters;
