@@ -101,6 +101,7 @@ console.log(fileUrl);
                  <div className={Style.voter__container__box__div__image}>
                  <Image 
                src={"/src/panda.jpg"}
+               //{images.upload}
                 width={150} 
                 height={150} 
                 objectFit="contain" 
@@ -150,6 +151,7 @@ console.log(fileUrl);
 <div className={ Style.createdVoter__info}>
       <Image 
       src={"/src/panda.jpg"} 
+      //{images.creator}
       width={150} 
       height={150} 
       alt="User Profile" />  

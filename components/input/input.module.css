@@ -10,7 +10,7 @@
     width: 100%;
     outline: none;
     padding-inline: .5rem;
-    color: #fff;
+    color: #730283
 }
 .input__box input::placeholder{
     color: #2d0036;

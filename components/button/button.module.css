@@ -9,7 +9,7 @@
     font-weight: 600;
     transition: all .4s ease-in-out;
 }
-.button :hover{
+.button:hover{
     background-color: #9a02ac;
     color: #231e39;
 }
