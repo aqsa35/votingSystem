@@ -6,7 +6,8 @@ import Image from "next/image";
 // INTERNAL IMPORT
 import { VotingContext } from '../context/voter';
 import Style from '../styles/allowedVoters.module.css';
-import images from "../src/panda.jpg";   
+import upload from "../public/upload.png"; 
+import userImage from "../public/upload2.jpg";   
 import Button from '../components/Button/Button';
 import Input from '../components/Input/Input';
 import { imageConfigDefault } from 'next/dist/shared/lib/image-config';
@@ -63,8 +64,10 @@ console.log(fileUrl);
                     <div className={Style.sideInfo}>
                     <div className={Style.sideInfo_box}>
                         <h4>Create Candidate For Voting</h4>
-                        <p>
-                        "Empower democracy with blockchain voting in Ethereum."
+                        <p>                   
+                "Revolutionize the democratic process by integrating secure and transparent blockchain voting on 
+                the Ethereum platform, empowering citizens with 
+                a decentralized and tamper-resistant method to participate in shaping the future of governance."
                         </p>
                         <p className= {Style.sideInfo_para}>Contract Candidate</p>
                         </div>
@@ -100,15 +103,14 @@ console.log(fileUrl);
                  <p>Upload File: JPG, PNG, GIF, WEBM MAX 10MB</p>
                  <div className={Style.voter__container__box__div__image}>
                  <Image 
-               src={"/src/panda.jpg"}
-               //{images.upload}
+                 src={upload}
                 width={150} 
                 height={150} 
                 objectFit="contain" 
                 alt="File upload"/>
              </div>
              <p>Drag & Drop File</p>
-             <p>or Browse Media on your device</p>
+             <p>or Browse Media on your Device</p>
              </div>
             </div>
            </div>
@@ -150,10 +152,11 @@ console.log(fileUrl);
 <div className={Style.createdVoter}>
 <div className={ Style.createdVoter__info}>
       <Image 
-      src={"/src/panda.jpg"} 
+      src={require("/public/pikachoo.png")} 
       //{images.creator}
       width={150} 
       height={150} 
+      placeholder = 'empty'
       alt="User Profile" />  
     <p>Notice For User</p>
     <p>Organizer <span>0x9399777..</span></p>

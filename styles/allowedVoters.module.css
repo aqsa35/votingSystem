@@ -1,4 +1,4 @@
- 
+
 .createVoter{
     width: 95%;
     margin:  0 auto;
@@ -52,6 +52,7 @@
     background-color: #231E39;
     padding: .5rem 1rem;
     border-radius:  1rem;
+    font-size:large;
     color: #b3b8cd;
 }
 
